@@ -1,0 +1,10 @@
+{
+  "name": "frontend-dev-eval",
+  "version": "0.0.1",
+  "description": "A project for HRN Frontend Developer - Professional Evaluation Test",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Azad Asanali"
+}
