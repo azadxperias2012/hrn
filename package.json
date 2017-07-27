@@ -4,12 +4,17 @@
   "description": "A project for HRN Frontend Developer - Professional Evaluation Test",
   "repository": {
     "type": "git",
-    "url": "?.git"
+    "url": "https://github.com/azadxperias2012/hrn.git"
   },
   "author": "Azad Asanali",
   "devDependencies": {
+    "browserify": "^14.4.0",
     "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.1",
-    "gulp-util": "^3.0.8"
-  }
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.2.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {}
 }
