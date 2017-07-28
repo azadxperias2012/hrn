@@ -1,0 +1,53 @@
+// _base.scss
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.headerLogo {
+    z-index: 1;
+    position: fixed;
+}
+
+.headerLogoContainer {
+    position: relative;
+}
+
+.HRNLogo {
+    position: absolute;
+}
+
+.buttonGetTickets {
+    width: 100%;
+    border: 1px solid $limeGreen;
+    background-color: $limeGreen;
+    color: $white;
+    &:hover {
+        border: 1px solid $white;
+        background-color: $white;
+        color: $limeGreen;
+    }
+}
+
+@media (max-width: 1920px) { 
+    .headerLogo {
+        left: 60px;
+        top: 13px;
+    }
+
+    .HRNLogo {
+        margin-left: -40px;
+        margin-top: 5px; 
+        width: 240px;
+        top: 0px;    
+    }
+
+    .buttonGetTickets {
+        max-width: 200px;
+        height: 40px;
+        font-size: 14px;
+    }
+}

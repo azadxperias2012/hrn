@@ -3,7 +3,6 @@ var $ = require('jquery');
 
 $(function() {    
     console.log('JQuery Loaded');
-    $('#welcome').text('The DOM is now loaded and can be manipulated.');
 });
 },{"jquery":2}],2:[function(require,module,exports){
 /*!

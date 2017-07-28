@@ -1,3 +1,95 @@
-div {
-  background-color: #E3C691;
+#navigationMenu {
+  width: 100%;
+  background-color: #010101;
+  position: fixed;
+  top: 0;
+}
+
+.menuList {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.menuItem {
+  color: #fff;
+  display: inline-block;
+}
+
+#menuItemTickets {
+  position: absolute;
+}
+
+@media (max-width: 1920px) {
+  #navigationMenu {
+    height: 75px;
+  }
+
+  .menuList {
+    top: 25px;
+  }
+
+  .menuItem {
+    font-size: 14px;
+    margin: 0 30px;
+  }
+
+  #menuItemTickets {
+    top: -8px;
+    width: 200px;
+  }
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.headerLogo {
+  z-index: 1;
+  position: fixed;
+}
+
+.headerLogoContainer {
+  position: relative;
+}
+
+.HRNLogo {
+  position: absolute;
+}
+
+.buttonGetTickets {
+  width: 100%;
+  border: 1px solid #99cc00;
+  background-color: #99cc00;
+  color: #fff;
+}
+.buttonGetTickets:hover {
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #99cc00;
+}
+
+@media (max-width: 1920px) {
+  .headerLogo {
+    left: 60px;
+    top: 13px;
+  }
+
+  .HRNLogo {
+    margin-left: -40px;
+    margin-top: 5px;
+    width: 240px;
+    top: 0px;
+  }
+
+  .buttonGetTickets {
+    max-width: 200px;
+    height: 40px;
+    font-size: 14px;
+  }
 }
