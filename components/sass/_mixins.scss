@@ -6,3 +6,9 @@
     -moz-background-size: cover;    
     background-size: cover;
 }
+
+@mixin buttonStyle($borderColor: $black, $bgColor: $white, $textColor: $black) {
+    border: 1px solid $borderColor;
+    background-color: $bgColor;
+    color: $textColor;
+}

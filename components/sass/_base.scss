@@ -2,13 +2,13 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;    
     margin: 0;
     padding: 0;
 }
 
 .headerLogo {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
 }
 
@@ -20,16 +20,50 @@
     position: absolute;
 }
 
-.buttonGetTickets {
+.greenButton {
+    @extend .genericButton;
     width: 100%;
-    border: 1px solid $limeGreen;
-    background-color: $limeGreen;
-    color: $white;
+    @include buttonStyle($limeGreen, $limeGreen, $white);
     &:hover {
-        border: 1px solid $white;
-        background-color: $white;
-        color: $limeGreen;
+        @include buttonStyle($white, $white, $limeGreen);
     }
+}
+
+.whiteButton {
+    @extend .genericButton;
+    width: 100%;
+    @include buttonStyle($white, $white, $limeGreen);
+    &:hover {
+        @include buttonStyle($limeGreen, $limeGreen, $white);
+    }
+}
+
+header {
+    @include backImage("../../images/header-bg-desktop.jpg");
+    height: 52vw;
+    color: $white;    
+    position: relative;
+    text-align: center;
+}
+
+#headerContentContainer {
+    position: absolute;
+    bottom: 4vw;
+    width: 100%;
+    .tagline {
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+}
+
+.tagline {    
+    font-family: 'Passion One', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#headerGetTicketsButton {
+    margin-left: 30px;
 }
 
 @media (max-width: 1920px) { 
@@ -45,7 +79,7 @@
         top: 0px;    
     }
 
-    .buttonGetTickets {
+    .genericButton {
         max-width: 200px;
         height: 40px;
         font-size: 14px;
