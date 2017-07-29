@@ -1,0 +1,27 @@
+// _uicomponents.scss
+
+.greenButton {
+    @extend .genericButton;
+    width: 100%;
+    @include buttonStyle($limeGreen, $limeGreen, $white);
+    &:hover {
+        @include buttonStyle($white, $white, $limeGreen);
+    }
+}
+
+.whiteButton {
+    @extend .genericButton;
+    width: 100%;
+    @include buttonStyle($white, $white, $limeGreen);
+    &:hover {
+        @include buttonStyle($limeGreen, $limeGreen, $white);
+    }
+}
+
+@media (max-width: 1920px) { 
+    .genericButton {
+        max-width: 200px;
+        height: 40px;
+        font-size: 14px;
+    }
+}

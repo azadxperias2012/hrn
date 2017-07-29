@@ -20,24 +20,6 @@
     position: absolute;
 }
 
-.greenButton {
-    @extend .genericButton;
-    width: 100%;
-    @include buttonStyle($limeGreen, $limeGreen, $white);
-    &:hover {
-        @include buttonStyle($white, $white, $limeGreen);
-    }
-}
-
-.whiteButton {
-    @extend .genericButton;
-    width: 100%;
-    @include buttonStyle($white, $white, $limeGreen);
-    &:hover {
-        @include buttonStyle($limeGreen, $limeGreen, $white);
-    }
-}
-
 header {
     @include backImage("../../images/header-bg-desktop.jpg");
     height: 52vw;
@@ -51,8 +33,7 @@ header {
     bottom: 4vw;
     width: 100%;
     .tagline {
-        font-size: 40px;
-        letter-spacing: 1px;
+        font-size: 1.75vw;        
     }
 }
 
@@ -66,6 +47,61 @@ header {
     margin-left: 30px;
 }
 
+#sponsors {
+    img {
+        margin-top: 3%;        
+    }
+}
+
+#avatureLogo, #benifyLogo, #cornerstoneLogo, #successfactorsLogo, #workdayLogo {
+    width: 5%;    
+    margin-right: 2.5%;
+}
+
+#benifyLogo {
+    width: 7%;
+}
+
+#cornerstoneLogo {
+    width: 8%;
+}
+
+#successfactorsLogo {
+    width: 13%;
+}
+
+#workdayLogo {
+    width: 5%;
+}
+
+.featuringKeynote {
+    position: absolute;
+    bottom: 3.5%;
+    text-align: center;
+    bottom: 2%;
+}
+
+.left {
+    left: 2.5%;
+}
+
+.right {
+    right: 5.5%;
+}
+
+.keyNoteTitle {
+    color: $white;
+    font-family: 'Libre Baskerville', serif;    
+    font-size: 1.25vw;
+    font-weight: 300;
+}
+
+.keyNoteSpeaker {
+    @extend .keyNoteTitle;
+    font-size: 1.75vw;
+    font-weight: 700;
+}
+
 @media (max-width: 1920px) { 
     .headerLogo {
         left: 60px;
@@ -77,11 +113,5 @@ header {
         margin-top: 5px; 
         width: 240px;
         top: 0px;    
-    }
-
-    .genericButton {
-        max-width: 200px;
-        height: 40px;
-        font-size: 14px;
     }
 }

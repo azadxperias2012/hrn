@@ -63,6 +63,101 @@
   position: absolute;
 }
 
+header {
+  background: url("../../images/header-bg-desktop.jpg") no-repeat 50% 20%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 52vw;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+#headerContentContainer {
+  position: absolute;
+  bottom: 4vw;
+  width: 100%;
+}
+#headerContentContainer .tagline {
+  font-size: 1.75vw;
+}
+
+.tagline {
+  font-family: 'Passion One', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#headerGetTicketsButton {
+  margin-left: 30px;
+}
+
+#sponsors img {
+  margin-top: 3%;
+}
+
+#avatureLogo, #benifyLogo, #cornerstoneLogo, #successfactorsLogo, #workdayLogo {
+  width: 5%;
+  margin-right: 2.5%;
+}
+
+#benifyLogo {
+  width: 7%;
+}
+
+#cornerstoneLogo {
+  width: 8%;
+}
+
+#successfactorsLogo {
+  width: 13%;
+}
+
+#workdayLogo {
+  width: 5%;
+}
+
+.featuringKeynote {
+  position: absolute;
+  bottom: 3.5%;
+  text-align: center;
+  bottom: 2%;
+}
+
+.left {
+  left: 2.5%;
+}
+
+.right {
+  right: 5.5%;
+}
+
+.keyNoteTitle, .keyNoteSpeaker {
+  color: #fff;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25vw;
+  font-weight: 300;
+}
+
+.keyNoteSpeaker {
+  font-size: 1.75vw;
+  font-weight: 700;
+}
+
+@media (max-width: 1920px) {
+  .headerLogo {
+    left: 60px;
+    top: 13px;
+  }
+
+  .HRNLogo {
+    margin-left: -40px;
+    margin-top: 5px;
+    width: 240px;
+    top: 0px;
+  }
+}
 .greenButton {
   width: 100%;
   border: 1px solid #99cc00;
@@ -87,50 +182,7 @@
   color: #fff;
 }
 
-header {
-  background: url("../../images/header-bg-desktop.jpg") no-repeat 50% 20%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  height: 52vw;
-  color: #fff;
-  position: relative;
-  text-align: center;
-}
-
-#headerContentContainer {
-  position: absolute;
-  bottom: 4vw;
-  width: 100%;
-}
-#headerContentContainer .tagline {
-  font-size: 40px;
-  letter-spacing: 1px;
-}
-
-.tagline {
-  font-family: 'Passion One', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-#headerGetTicketsButton {
-  margin-left: 30px;
-}
-
 @media (max-width: 1920px) {
-  .headerLogo {
-    left: 60px;
-    top: 13px;
-  }
-
-  .HRNLogo {
-    margin-left: -40px;
-    margin-top: 5px;
-    width: 240px;
-    top: 0px;
-  }
-
   .genericButton, .greenButton, .whiteButton {
     max-width: 200px;
     height: 40px;
