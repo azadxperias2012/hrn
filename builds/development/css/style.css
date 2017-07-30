@@ -80,7 +80,31 @@ header {
   width: 100%;
 }
 #headerContentContainer .tagline {
-  font-size: 1.75vw;
+  font-size: 2.5vw;
+}
+
+.centerTagLine {
+  width: 100%;
+  position: absolute;
+  bottom: 35vw;
+  left: 35%;
+}
+.centerTagLine span {
+  top: 0;
+  position: absolute;
+  font-family: 'Playfair Display', serif;
+  font-size: 2vw;
+  font-weight: 200;
+  display: block;
+}
+.centerTagLine .centerTagLineLeftIndented {
+  left: 4.5%;
+}
+.centerTagLine #secondCenterTagLine {
+  font-size: 6vw;
+}
+.centerTagLine #thirdCenterTagLine {
+  top: 6.5vw;
 }
 
 .tagline {

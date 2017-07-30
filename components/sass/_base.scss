@@ -33,9 +33,40 @@ header {
     bottom: 4vw;
     width: 100%;
     .tagline {
-        font-size: 1.75vw;        
+        font-size: 2.5vw;        
     }
 }
+
+.centerTagLine {
+    width: 100%;
+    position: absolute;    
+    bottom: 35vw;
+    left: 35%;
+    span {
+        top: 0;
+        position: absolute;
+        font-family: 'Playfair Display', serif;
+        font-size: 2vw;
+        font-weight: 200;
+        display: block;
+    }
+
+    .centerTagLineLeftIndented {
+        left: 4.5%;
+    }
+
+    #secondCenterTagLine {
+        font-size: 6vw;
+    }
+
+    #thirdCenterTagLine {
+        top: 6.5vw;        
+    }
+}
+
+
+
+
 
 .tagline {    
     font-family: 'Passion One', sans-serif;
