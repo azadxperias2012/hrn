@@ -1,7 +1,7 @@
 // _mixins.scss
 
 @mixin backImage($image) {
-    background: url($image) no-repeat 50% 20%;
+    background: url($image) center top no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;    
     background-size: cover;

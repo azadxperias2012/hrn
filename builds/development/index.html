@@ -19,7 +19,7 @@
                 <img class="HRNLogo" src="images/menu/menu-logo-2.svg" alt="HRN Logo">
             </div>
         </div>
-        <nav id="navigationMenu">
+        <nav id="navigationMenuDesktop">
             <ul class="menuList">
                 <li class="menuItem">HOME</li>
                 <li class="menuItem">SPEAKERS</li>
@@ -29,12 +29,36 @@
                 <li class="menuItem">disruptHR</li>
                 <li class="menuItem">TRAVEL</li>
                 <li class="menuItem">FLOORPLAN</li>
-                <li class="menuItem">MORE</li>
+                <li class="menuItem" id="menuItemMore">
+                    MORE
+                    <ul id="moreDropMenu">
+                        <li>
+                            <div id="moreDropMenuContainer">
+                                <ul>
+                                    <li>PRESS</li>
+                                    <li>PRESS KIT</li>
+                                    <li>CONTACT</li>
+                                    <li>HRN BLOG</li>
+                                    <li>HRN</li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </li>
                 <li class="menuItem" id="menuItemTickets">
                     <button class="greenButton">GET TICKETS</button>
                 </li>
             </ul>
         </nav>
+
+        <!-- Hamburger menu for Mobile and Tablet layouts  -->
+        <!-- CSS Styles from http://callmenick.com/post/animating-css-only-hamburger-menu-icons  -->
+        <button class="c-hamburger c-hamburger--htx">
+            <span>toggle menu</span>
+        </button>
+
+        <div id="menuBarMobileLayout"></div>
         <header>
             <div id="headerContentContainer">
                 <h1 class="centerTagLine">
@@ -72,7 +96,5 @@
                 </div>
             </div>            
         </header>
-            
-        <p>Thanks for visiting HRN</p>
     </body>
 </html>

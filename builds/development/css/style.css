@@ -1,4 +1,4 @@
-#navigationMenu {
+#navigationMenuDesktop {
   width: 100%;
   background-color: #010101;
   position: fixed;
@@ -19,13 +19,84 @@
   color: #fff;
   display: inline-block;
 }
+.menuItem:hover {
+  color: #99cc00;
+  cursor: pointer;
+}
 
 #menuItemTickets {
   position: absolute;
 }
 
+#menuBarMobileLayout {
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  background-color: #010101;
+  z-index: 1;
+  top: -100px;
+}
+
+#navigationMenuTablet {
+  display: none;
+  width: 100%;
+  background-color: #010101;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+#menuItemMore #moreDropMenu {
+  color: #010101;
+  padding-top: 35px;
+}
+
+#menuItemMore:hover #moreDropMenu {
+  visibility: visible;
+}
+
+#moreDropMenu {
+  position: absolute;
+  list-style: none;
+  visibility: hidden;
+}
+
+#moreDropMenuContainer {
+  width: 200px;
+  padding: 0;
+  border-top: 4px solid rgba(10, 9, 9, 0.25);
+  background-color: #fff;
+  text-align: left;
+}
+#moreDropMenuContainer ul {
+  padding: 5px 0;
+}
+#moreDropMenuContainer ul li {
+  padding: 5px 0 5px 18px;
+  list-style: none;
+  font-size: 14px;
+}
+#moreDropMenuContainer ul li:hover {
+  background-color: #99cc00;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 1270px) {
+  #navigationMenuDesktop {
+    display: none;
+  }
+
+  #navigationMenuTablet {
+    display: block;
+  }
+
+  #menuBarMobileLayout {
+    top: 0;
+  }
+}
 @media (max-width: 1920px) {
-  #navigationMenu {
+  #navigationMenuDesktop {
     height: 75px;
   }
 
@@ -41,6 +112,12 @@
   #menuItemTickets {
     top: -8px;
     width: 200px;
+  }
+}
+@media (max-width: 1550px) {
+  .menuItem {
+    font-size: 14px;
+    margin: 0 1vw;
   }
 }
 * {
@@ -64,7 +141,7 @@
 }
 
 header {
-  background: url("../../images/header-bg-desktop.jpg") no-repeat 50% 20%;
+  background: url("../../images/header-bg-desktop.jpg") center top no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -72,6 +149,7 @@ header {
   color: #fff;
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
 #headerContentContainer {
@@ -86,8 +164,8 @@ header {
 .centerTagLine {
   width: 100%;
   position: absolute;
-  bottom: 35vw;
-  left: 35%;
+  bottom: 33vw;
+  left: 38.5%;
 }
 .centerTagLine span {
   top: 0;
@@ -211,5 +289,125 @@ header {
     max-width: 200px;
     height: 40px;
     font-size: 14px;
+  }
+}
+.c-hamburger {
+  display: block;
+  overflow: hidden;
+  width: 96px;
+  height: 96px;
+  font-size: 0;
+  text-indent: -9999px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: fixed;
+  z-index: 2;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: #fff;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #fff;
+  content: "";
+}
+
+.c-hamburger span::before {
+  top: -20px;
+}
+
+.c-hamburger span::after {
+  bottom: -20px;
+}
+
+.c-hamburger--htx {
+  background-color: transparent;
+}
+
+.c-hamburger--htx span {
+  transition: background 0s 0.3s;
+}
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger--htx span::before {
+  transition-property: top, transform;
+}
+
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.c-hamburger--htx.is-active {
+  background-color: transparent;
+}
+
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+@media (min-width: 1280px) {
+  .c-hamburger {
+    display: none;
+  }
+}
+@media (max-width: 1920px) {
+  .c-hamburger {
+    width: 35px;
+    height: 35px;
+    top: 20px;
+    right: 30px;
+  }
+  .c-hamburger span {
+    top: 15px;
+    height: 4px;
+  }
+  .c-hamburger span:before {
+    top: 10px;
+  }
+  .c-hamburger span:after {
+    bottom: 10px;
+  }
+  .c-hamburger span:before, .c-hamburger span:after {
+    height: 4px;
+    content: "";
   }
 }

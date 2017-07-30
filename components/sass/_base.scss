@@ -26,6 +26,7 @@ header {
     color: $white;    
     position: relative;
     text-align: center;
+    overflow: hidden;
 }
 
 #headerContentContainer {
@@ -40,8 +41,8 @@ header {
 .centerTagLine {
     width: 100%;
     position: absolute;    
-    bottom: 35vw;
-    left: 35%;
+    bottom: 33vw;
+    left: 38.5%;
     span {
         top: 0;
         position: absolute;
@@ -63,10 +64,6 @@ header {
         top: 6.5vw;        
     }
 }
-
-
-
-
 
 .tagline {    
     font-family: 'Passion One', sans-serif;
@@ -133,7 +130,7 @@ header {
     font-weight: 700;
 }
 
-@media (max-width: 1920px) { 
+@media (max-width: 1920px) {
     .headerLogo {
         left: 60px;
         top: 13px;

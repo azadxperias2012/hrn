@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 var jsSources = [
-    'components/scripts/index.js'
+    'components/scripts/index.js',
+    'components/scripts/toggleMenu.js'
 ];
 
 var sassSources = [ 'components/sass/style.scss' ];

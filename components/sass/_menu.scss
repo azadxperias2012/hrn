@@ -1,6 +1,6 @@
 // _menu.scss
 
-#navigationMenu {
+#navigationMenuDesktop {
     width: 100%;
     background-color: $black;
     position: fixed;
@@ -20,14 +20,86 @@
 .menuItem {
     color: $white;
     display: inline-block;
+    &:hover {
+        color: $limeGreen;
+        cursor: pointer;
+    }
 }
 
 #menuItemTickets {
     position: absolute;
 }
 
+#menuBarMobileLayout {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    background-color: $black;
+    z-index: 1;
+    top: -100px
+}
+
+#navigationMenuTablet {
+    display: none;
+    width: 100%;
+    background-color: $black;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#menuItemMore #moreDropMenu {
+    color: $black;
+    padding-top: 35px;    
+}
+
+#menuItemMore:hover #moreDropMenu {
+    visibility: visible;    
+}
+
+#moreDropMenu {
+    position: absolute;
+    list-style: none;
+    visibility: hidden;
+}
+
+#moreDropMenuContainer {
+    width: 200px;
+    padding: 0;
+    border-top: 4px solid rgba(10, 9, 9, 0.25);
+    background-color: $white;
+    text-align: left;
+    ul {
+        padding: 5px 0;
+        li {
+            padding: 5px 0 5px 18px;
+            list-style: none;
+            font-size: 14px;
+            &:hover {
+                background-color: $limeGreen;
+                color: $white;
+                cursor: pointer;
+            }
+        }        
+    }
+}
+
+@media (max-width: 1270px) {
+    #navigationMenuDesktop {
+        display: none;
+    }
+
+    #navigationMenuTablet {
+        display: block;
+    }
+
+    #menuBarMobileLayout {
+        top: 0;
+    }
+}
+
 @media (max-width: 1920px) {
-    #navigationMenu {
+    #navigationMenuDesktop {
         height: 75px;
     }
 
@@ -43,5 +115,12 @@
     #menuItemTickets {
         top: -8px;
         width: 200px;
+    }
+}
+
+@media (max-width: 1550px) {
+    .menuItem {
+        font-size: 14px;
+        margin: 0 1vw;
     }
 }
