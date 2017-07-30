@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+body, section {
+    overflow-x: hidden;
+}
+
 .headerLogo {
     z-index: 2;
     position: fixed;

@@ -1,0 +1,161 @@
+#mobileAppSection {
+    text-align: center;
+    position: relative;
+    color: $black;
+    @include backImage("../../images/mobileapp/desktop-bg.jpg");
+    left: 0;
+    top: 0;
+    padding-top: 1.8vw; 
+    padding-bottom: 1.8vw;
+}
+
+#mobileAppContainer {
+    width: 67vw;
+    margin: 0 auto;
+}
+
+.rightSide, .leftSide {
+    display: inline-block;
+    width: 29vw;
+    vertical-align: middle;
+}
+
+.mobileAppLogo {
+    width: 29vw;
+    height: 14vw;
+}
+
+.mobileAppPhones {
+    width: 10vw;
+    height: 14.5vw;
+    margin: 0 auto;
+}
+
+.mobileAppPredictiveHire {
+    width: 5.5vw;
+    height: 2vw;
+    margin: -1.5vw 0 0 16vw;
+    display: block;
+}
+
+.leftSide {
+    .sectionHeadline {
+        margin-top: 1.8vw;
+        margin-bottom: 1.3vw;
+    }
+
+    .mobileAppDescription {
+        @extend .futureWorkDescription;
+        margin-bottom: 1.3vw;
+        padding-left: 0.9vw;
+        padding-right: 0.9vw;
+    }
+
+    .googlePlay, .appleStore {
+        width: 7vw;
+        height: 2vw;
+        margin: 0 0.78vw;
+    }
+}
+
+.rightSide {
+    #viewTutorialButton {
+        margin-top: 1.8vw;
+    }
+
+    #viewTutorialButton.whiteTransparentButton {
+        @extend .genericButton;
+        width: 100%;
+        @include buttonStyle($white, $white, $black);
+        &:hover {
+            @include buttonStyle($white, $transparent, $white);
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    #mobileAppSection {
+        padding-top: 36px; 
+        padding-bottom: 36px;
+    }
+    
+    #mobileAppContainer {
+        width: 1300px;
+    }
+
+    .rightSide, .leftSide {
+        width: 570px;
+    }
+
+    .mobileAppLogo {
+        width: 570px;
+        height: 275px;
+    }
+
+    .mobileAppPhones {
+        width: 200px;
+        height: 280px;
+    }
+
+    .mobileAppPredictiveHire {
+        width: 100px;
+        height: 40px;
+        margin: -30px 0 0 315px;
+    }
+
+    .leftSide {
+        .sectionHeadline {
+            margin-top: 35px;
+            margin-bottom: 25px;
+        }
+
+        .mobileAppDescription {
+            font-size: 14px;
+            margin-bottom: 25px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .googlePlay, .appleStore {
+            width: 135px;
+            height: 40px;
+            margin: 0 15px;
+        }
+    }
+
+    .rightSide {
+        #viewTutorialButton {
+            margin-top: 35px;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    #mobileAppContainer {
+        width: 100vw;
+    }
+
+    .rightSide, .leftSide {
+        width: 47.5vw;
+    }
+
+    .mobileAppLogo {
+        width: 46vw;
+        height: 22vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .rightSide, .leftSide {
+        width: 100vw;
+        display: block;
+    }
+}
+
+@media (max-width: 640px) {
+    .mobileAppLogo {
+        margin-top: 35px;
+        width: 89vw;
+        height: 41vw;
+    }
+}
