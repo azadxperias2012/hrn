@@ -4,7 +4,8 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8">        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
         <title>London - HR Tech World</title>
         <link rel="stylesheet" href="css/style.css">        
         <link href="https://fonts.googleapis.com/css?family=Roboto|Libre+Baskerville|Passion+One|Playfair+Display" rel="stylesheet">
@@ -38,6 +39,18 @@
                                     <li>PRESS</li>
                                     <li>PRESS KIT</li>
                                     <li>CONTACT</li>
+                                    <li>HR TECH WORLD
+                                        <div class="subLine">
+                                            <span class="sanFranciscoColor">SAN FRANCISCO</span>
+                                            <span>14-15 JUNE 2017</span>
+                                        </div>
+                                    </li>
+                                    <li>HR TECH WORLD
+                                        <div class="subLine">
+                                            <span class="amsterdamColor">AMSTERDAM</span>
+                                            <span>24-25 OCTOBER 2017</span>
+                                        </div>
+                                    </li>
                                     <li>HRN BLOG</li>
                                     <li>HRN</li>
                                 </ul>
@@ -54,11 +67,44 @@
 
         <!-- Hamburger menu for Mobile and Tablet layouts  -->
         <!-- CSS Styles from http://callmenick.com/post/animating-css-only-hamburger-menu-icons  -->
-        <button class="c-hamburger c-hamburger--htx">
+        <button class="c-hamburger c-hamburger--htx" id="hamBurgerMenu">
             <span>toggle menu</span>
         </button>
 
         <div id="menuBarMobileLayout"></div>
+        <nav id="navigationMenuMobile">
+            <ul class="menuListMobile">
+                <li class="menuItemMobile">HOME</li>
+                <li class="menuItemMobile">SPEAKERS</li>
+                <li class="menuItemMobile">AGENDA</li>
+                <li class="menuItemMobile">SPONSORS</li>
+                <li class="menuItemMobile">MEDIA</li>
+                <li class="menuItemMobile">DISRUPTHR</li>
+                <li class="menuItemMobile">TRAVEL</li>
+                <li class="menuItemMobile">FLOORPLAN</li>
+                <li class="menuItemMobile">PRESS</li>
+                <li class="menuItemMobile">PRESS KIT</li>
+                <li class="menuItemMobile">CONTACT</li>
+                <li class="menuItemMobile">HR TECH WORLD
+                    <div class="subLine">
+                        <span class="sanFranciscoColor">SAN FRANCISCO</span>
+                        <span>14-15 JUNE 2017</span>
+                    </div>
+                </li>
+                <li class="menuItemMobile">HR TECH WORLD
+                    <div class="subLine">
+                        <span class="amsterdamColor">AMSTERDAM</span>
+                        <span>24-25 OCTOBER 2017</span>
+                    </div>
+                </li>
+                <li class="menuItemMobile">HRN BLOG</li>
+                <li class="menuItemMobile">HRN</li>
+                <li class="menuItemMobile" id="menuItemMobileTickets">
+                    <button class="greenButton">GET TICKETS</button>
+                </li>
+            </ul>
+        </nav>
+
         <header>
             <div id="headerContentContainer">
                 <h1 class="centerTagLine">
@@ -76,12 +122,17 @@
                     <a href="https://www.benify.com/" target="_blank">                        
                         <img id="benifyLogo" src="images/sponsors/benify.svg" alt="Benify">
                     </a>
+                    <br class="mobileGridBreak">
                     <a href="https://www.cornerstoneondemand.co.uk/" target="_blank">                        
                         <img id="cornerstoneLogo" src="images/sponsors/cornerstone.svg" alt="Cornerstone">
                     </a>
                     <a href="https://www.successfactors.com/" target="_blank">                        
                         <img id="successfactorsLogo" src="images/sponsors/successfactors.svg" alt="SAP successfactors">
                     </a>
+                    <a href="https://www.successfactors.com/" target="_blank">                        
+                        <img id="successfactorsLogoMobile" src="images/sponsors/successfactors-mobile.svg" alt="SAP successfactors">
+                    </a>
+                    <br class="mobileGridBreak">
                     <a href="https://www.workday.com/" target="_blank">                        
                         <img id="workdayLogo" src="images/sponsors/workday.svg" alt="Workday">
                     </a>

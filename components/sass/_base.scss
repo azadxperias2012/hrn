@@ -98,6 +98,10 @@ header {
     width: 13%;
 }
 
+#successfactorsLogoMobile {
+    display: none;
+}
+
 #workdayLogo {
     width: 5%;
 }
@@ -130,6 +134,10 @@ header {
     font-weight: 700;
 }
 
+.mobileGridBreak {
+    display: none;
+}
+
 @media (max-width: 1920px) {
     .headerLogo {
         left: 60px;
@@ -141,5 +149,122 @@ header {
         margin-top: 5px; 
         width: 240px;
         top: 0px;    
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        height: 220vw;
+        @include backImage("../../images/header-bg-mobile.jpg");        
+    }
+
+    .centerTagLine {
+        bottom: 175vw;
+        left: 26.5%;
+        
+        .centerTagLineLeftIndented {
+            font-size: 4vw;
+            left: 7.5%;
+        }
+
+        #secondCenterTagLine {
+            font-size: 11.25vw;
+        }
+
+        #thirdCenterTagLine {
+            top: 11.75vw;
+        }
+    }
+
+    #headerContentContainer {
+        bottom: 10vw;
+        .tagline {
+            margin-bottom: 7.5vw;
+            font-size: 10vw;
+        }
+
+        #headerAgendaButton, #headerGetTicketsButton {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #headerGetTicketsButton {
+            margin-top: 7.5vw;
+        }
+
+        .featuringKeynote {
+            top: auto;
+            bottom: 105vw;
+            .keyNoteTitle {
+                font-size: 3vw;
+            }
+
+            .keyNoteSpeaker {
+                font-size: 4vw;
+            }
+        }
+
+        .left {
+            left: 5vw;
+            text-align: left;
+        }
+        
+        .right {
+            text-align: right;
+            right: 5vw;
+        }
+
+        #sponsors {
+            position: relative;
+            bottom: -8.75vw;
+            img {
+                margin-top: 2.8125vw;
+                margin-bottom: 2.8125vw;
+                height: 11.5625vw;
+                position: static;
+                vertical-align: bottom;
+            }
+        }
+
+        .mobileGridBreak {
+            display: block;
+        }
+
+        #avatureLogo {
+            width: 26vw;
+            margin-right: 16vw;
+        }
+
+        #benifyLogo, #successfactorsLogoMobile {
+            width: 33vw;
+            margin-right: 0;            
+        }
+
+        #cornerstoneLogo {
+            width: 37vw;
+            margin-right: 4vw;
+            margin-left: 2vw;
+        }
+
+        #successfactorsLogo {
+            display: none;
+        }
+
+        #successfactorsLogoMobile {
+            display: inline-block;
+        }
+
+        #workdayLogo {
+            width: 24vw;
+            margin-right: 50vw;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .centerTagLine {
+        #thirdCenterTagLine {
+            top: 11.25vw;
+        }
     }
 }

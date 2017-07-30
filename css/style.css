@@ -37,15 +37,6 @@
   top: -100px;
 }
 
-#navigationMenuTablet {
-  display: none;
-  width: 100%;
-  background-color: #010101;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-}
-
 #menuItemMore #moreDropMenu {
   color: #010101;
   padding-top: 35px;
@@ -82,19 +73,45 @@
   cursor: pointer;
 }
 
-@media (max-width: 1270px) {
-  #navigationMenuDesktop {
-    display: none;
-  }
-
-  #navigationMenuTablet {
-    display: block;
-  }
-
-  #menuBarMobileLayout {
-    top: 0;
-  }
+.subLine {
+  line-height: 8px;
+  font-size: 8px;
 }
+.subLine .amsterdamColor {
+  color: #00a7e1;
+}
+.subLine .sanFranciscoColor {
+  color: #e80f42;
+}
+
+#navigationMenuMobile.navigationMenuMobileActivate {
+  right: 0;
+}
+
+#navigationMenuMobile {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  top: 0;
+  position: fixed;
+  display: block;
+  right: -100vw;
+  z-index: 1;
+}
+
+.menuListMobile {
+  list-style: none;
+  text-align: center;
+  padding-top: 20vh;
+  margin: 0;
+}
+
+.menuItemMobile {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
 @media (max-width: 1920px) {
   #navigationMenuDesktop {
     height: 75px;
@@ -118,6 +135,19 @@
   .menuItem {
     font-size: 14px;
     margin: 0 1vw;
+  }
+}
+@media (max-width: 1270px) {
+  #navigationMenuDesktop {
+    display: none;
+  }
+
+  #navigationMenuMobile {
+    display: block;
+  }
+
+  #menuBarMobileLayout {
+    top: 0;
   }
 }
 * {
@@ -216,6 +246,10 @@ header {
   width: 13%;
 }
 
+#successfactorsLogoMobile {
+  display: none;
+}
+
 #workdayLogo {
   width: 5%;
 }
@@ -247,6 +281,10 @@ header {
   font-weight: 700;
 }
 
+.mobileGridBreak {
+  display: none;
+}
+
 @media (max-width: 1920px) {
   .headerLogo {
     left: 60px;
@@ -258,6 +296,105 @@ header {
     margin-top: 5px;
     width: 240px;
     top: 0px;
+  }
+}
+@media (max-width: 640px) {
+  header {
+    height: 220vw;
+    background: url("../../images/header-bg-mobile.jpg") center top no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+
+  .centerTagLine {
+    bottom: 175vw;
+    left: 26.5%;
+  }
+  .centerTagLine .centerTagLineLeftIndented {
+    font-size: 4vw;
+    left: 7.5%;
+  }
+  .centerTagLine #secondCenterTagLine {
+    font-size: 11.25vw;
+  }
+  .centerTagLine #thirdCenterTagLine {
+    top: 11.75vw;
+  }
+
+  #headerContentContainer {
+    bottom: 10vw;
+  }
+  #headerContentContainer .tagline {
+    margin-bottom: 7.5vw;
+    font-size: 10vw;
+  }
+  #headerContentContainer #headerAgendaButton, #headerContentContainer #headerGetTicketsButton {
+    display: block;
+    margin: 0 auto;
+  }
+  #headerContentContainer #headerGetTicketsButton {
+    margin-top: 7.5vw;
+  }
+  #headerContentContainer .featuringKeynote {
+    top: auto;
+    bottom: 105vw;
+  }
+  #headerContentContainer .featuringKeynote .keyNoteTitle, #headerContentContainer .featuringKeynote .keyNoteSpeaker {
+    font-size: 3vw;
+  }
+  #headerContentContainer .featuringKeynote .keyNoteSpeaker {
+    font-size: 4vw;
+  }
+  #headerContentContainer .left {
+    left: 5vw;
+    text-align: left;
+  }
+  #headerContentContainer .right {
+    text-align: right;
+    right: 5vw;
+  }
+  #headerContentContainer #sponsors {
+    position: relative;
+    bottom: -8.75vw;
+  }
+  #headerContentContainer #sponsors img {
+    margin-top: 2.8125vw;
+    margin-bottom: 2.8125vw;
+    height: 11.5625vw;
+    position: static;
+    vertical-align: bottom;
+  }
+  #headerContentContainer .mobileGridBreak {
+    display: block;
+  }
+  #headerContentContainer #avatureLogo {
+    width: 26vw;
+    margin-right: 16vw;
+  }
+  #headerContentContainer #benifyLogo, #headerContentContainer #successfactorsLogoMobile {
+    width: 33vw;
+    margin-right: 0;
+  }
+  #headerContentContainer #cornerstoneLogo {
+    width: 37vw;
+    margin-right: 4vw;
+    margin-left: 2vw;
+  }
+  #headerContentContainer #successfactorsLogo {
+    display: none;
+  }
+  #headerContentContainer #successfactorsLogoMobile {
+    display: inline-block;
+  }
+  #headerContentContainer #workdayLogo {
+    width: 24vw;
+    margin-right: 50vw;
+  }
+}
+@media (max-width: 400px) {
+  .centerTagLine #thirdCenterTagLine {
+    top: 11.25vw;
   }
 }
 .greenButton {

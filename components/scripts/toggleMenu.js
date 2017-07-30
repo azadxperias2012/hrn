@@ -12,8 +12,24 @@ $(document).ready(function () {
      function toggleHandler(toggleMenu) {
          toggleMenu.addEventListener("click", function(e) {
              e.preventDefault();
-             (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+             if(this.classList.contains("is-active") === true) {
+                this.classList.remove("is-active")
+                if(this.id === "hamBurgerMenu") {
+                     toggleNavigationMenu(false);
+                }
+             } else {
+                 this.classList.add("is-active")
+                 if(this.id === "hamBurgerMenu") {
+                     toggleNavigationMenu(true);
+                 }
+             }
          });
-     }
+     }        
 
+     function toggleNavigationMenu(activate) {
+         var navigationMenuMobile = document.getElementById("navigationMenuMobile");
+         if(navigationMenuMobile) {
+             (activate) ? navigationMenuMobile.classList.add("navigationMenuMobileActivate") : navigationMenuMobile.classList.remove("navigationMenuMobileActivate");
+         }
+     }
 });
