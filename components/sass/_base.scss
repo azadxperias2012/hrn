@@ -152,6 +152,14 @@ header {
     }
 }
 
+@media (max-width: 1280px) {
+    #headerContentContainer {
+        .tagline {
+            font-size: 48px
+        }
+    }
+}
+
 @media (max-width: 640px) {
     header {
         height: 220vw;
