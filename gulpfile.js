@@ -6,13 +6,17 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     concat = require('gulp-concat');
 
-var env, jsSources, sassSources, htmlSources, outputDir;
+var env, jsSources,
+    sassSources, htmlSources,
+    outputDir, sassStyle;
 
 env = process.env.NODE_ENV || 'development';
 if(env === 'development') {
     outputDir = 'builds/development/';
+    sassStyle = 'expanded';
 } else {
     outputDir = 'builds/production/';
+    sassStyle = 'compressed';
 }
 
 jsSources = [
@@ -34,12 +38,13 @@ gulp.task('js', function() {
 gulp.task('compass', function() {
     gulp.src(sassSources)
     .pipe(compass({
+        css: outputDir + 'css',
         sass: 'components/sass',
         image: outputDir + 'images',
-        style: 'expanded'
+        style: sassStyle
     })
     .on('error', gutil.log))
-    .pipe(gulp.dest(outputDir + 'css'))
+    // .pipe(gulp.dest(outputDir + 'css'))
     .pipe(connect.reload())
 });
 
