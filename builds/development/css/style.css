@@ -703,7 +703,9 @@ header {
 }
 
 .rightSide #viewTutorialButton {
+  margin: 0 auto;
   margin-top: 1.8vw;
+  display: block;
 }
 .rightSide #viewTutorialButton.whiteTransparentButton {
   width: 100%;
@@ -777,11 +779,16 @@ header {
   }
 
   .mobileAppLogo {
+    margin-top: 1.8vw;
     width: 46vw;
     height: 22vw;
   }
 }
 @media (max-width: 1000px) {
+  .mobileAppPredictiveHire {
+    margin: -3vw 0 0 51.5vw;
+  }
+
   .rightSide, .leftSide {
     width: 100vw;
     display: block;
