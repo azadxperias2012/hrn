@@ -2,8 +2,11 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     browserify = require('browserify'),
     source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
     compass = require('gulp-compass'),
-    connect = require('gulp-connect'),
+    connect = require('gulp-connect'),    
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
     concat = require('gulp-concat');
 
 var env, jsSources,
@@ -31,6 +34,8 @@ gulp.task('js', function() {
 
     bundleStream
         .pipe(source('script.js'))
+        .pipe(buffer())
+        .pipe(gulpif(env === 'production', uglify()))
         .pipe(gulp.dest(outputDir + 'js'))
         .pipe(connect.reload())
 });
